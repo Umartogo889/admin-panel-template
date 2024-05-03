@@ -1,4 +1,7 @@
 (function () {
+  /* ========= Body ======== */
+  const body = document.querySelector("body")
+
   /* ========= Preloader ======== */
   const preloader = document.querySelectorAll('#preloader')
 
@@ -29,6 +32,7 @@
     sidebarNavWrapper.classList.toggle("active");
     overlay.classList.add("active");
     mainWrapper.classList.toggle("active");
+    body.classList.add("no-scrool")
 
     if (document.body.clientWidth > 1200) {
       if (menuToggleButtonIcon.classList.contains("lni-chevron-left")) {
@@ -49,5 +53,6 @@
     sidebarNavWrapper.classList.remove("active");
     overlay.classList.remove("active");
     mainWrapper.classList.remove("active");
+    body.classList.remove("no-scrool")
   });
 })();
